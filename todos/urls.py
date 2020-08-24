@@ -19,5 +19,10 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('complete/<int:text_pk>/', views.complete, name='complete'),
+    path('create/', views.create, name='create'),
+    path('delete/', views.delete, name='delete'),
+    path('delete/<int:todo_pk>/', views.deleteOne, name='delete-one'),
+    path('delete/all/', views.deleteAll, name='delete-all'),
 
 ]
